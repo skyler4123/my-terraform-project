@@ -12,7 +12,8 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-unique-bucket-name-123" # Must be globally unique
+  # bucket = "my-unique-bucket-name-123" # Must be globally unique
+  bucket = var.bucket_name
   tags = {
     Name = "MyFirstBucket"
   }
